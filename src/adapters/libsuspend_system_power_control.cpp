@@ -71,6 +71,7 @@ void repowerd::LibsuspendSystemPowerControl::allow_automatic_suspend(
     std::lock_guard<std::mutex> lock{suspend_mutex};
 
     log->log(log_tag, "allow_suspend(%s)", id.c_str());
+    return;
 
     if (suspend_disallowances.erase(id) > 0 &&
         suspend_disallowances.empty())
@@ -88,6 +89,7 @@ void repowerd::LibsuspendSystemPowerControl::disallow_automatic_suspend(
 
     log->log(log_tag, "disallow_suspend(%s)", id.c_str());
 
+    return;
     auto const could_be_suspended = suspend_disallowances.empty();
 
     suspend_disallowances.insert(id);
