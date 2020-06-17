@@ -20,7 +20,7 @@
 #include "core/default_state_machine_factory.h"
 
 #include "adapters/android_autobrightness_algorithm.h"
-#include "adapters/android_backlight.h"
+//#include "adapters/android_backlight.h"
 #include "adapters/android_device_config.h"
 #include "adapters/android_device_quirks.h"
 #include "adapters/backlight_brightness_control.h"
@@ -380,7 +380,7 @@ repowerd::DefaultDaemonConfig::the_backlight()
 {
     if (!backlight)
     {
-        try
+        /*try
         {
             backlight = std::make_shared<AndroidBacklight>();
         }
@@ -388,7 +388,7 @@ repowerd::DefaultDaemonConfig::the_backlight()
         {
             the_log()->log(log_tag, "Failed to create AndroidBacklight: %s", e.what());
             the_log()->log(log_tag, "Trying SysfsBacklight");
-        }
+        }*/
 
         try
         {
