@@ -1,3 +1,9 @@
+repowerd (2020.10+ubports) xenial; urgency=medium
+
+  * Add Android 9 support
+
+ -- Erfan Abdi <erfangplus@gmail.com>  Thu, 15 Oct 2020 13:43:24 +0300
+
 repowerd (2018.04+ubports) xenial; urgency=medium
 
   * Import to UBports 
